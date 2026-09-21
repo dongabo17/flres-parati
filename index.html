@@ -9,12 +9,11 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&family=Pacifico&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css?v=6">
+  <link rel="stylesheet" href="styles.css?v=12">
 </head>
 <body>
   <div class="sky-glow" aria-hidden="true"></div>
   <div class="petals" aria-hidden="true"></div>
-
   <main class="page-shell">
     <section class="card" aria-labelledby="title">
       <div class="sparkle sparkle-one" aria-hidden="true">✦</div>
@@ -23,31 +22,25 @@
       <h1 id="title">Para ti <span aria-hidden="true">💛</span></h1>
       <p class="message">Unas flores amarillas para alegrarte el día, porque te mereces muchos momentos bonitos <span aria-hidden="true">💛🌻</span></p>
       <button class="surprise-button" type="button" id="surpriseButton" aria-expanded="false" aria-controls="surprise">
-        <span>Presiona para una sorpresa</span>
-        <span class="button-icon" aria-hidden="true">✨</span>
+        <span>Presiona para una sorpresa</span><span class="button-icon" aria-hidden="true">✨</span>
       </button>
+      <p class="secret-message" id="secretMessage" aria-live="polite">Que nunca te falten razones para sonreír 🌼</p>
     </section>
 
-    <section class="surprise" id="surprise" aria-live="polite" aria-hidden="true">
-      <p class="secret-message" id="secretMessage">Que nunca te falten razones para sonreír 🌼</p>
-      <div class="bouquet-space" aria-label="Un ramo gigante de flores amarillas">
+    <section class="surprise" id="surprise" aria-hidden="true">
+      <div class="bouquet-scene" aria-label="Un ramo centrado de flores amarillas">
         <div class="bouquet" aria-hidden="true">
-          <div class="bouquet-flower flower-a">🌻</div>
-          <div class="bouquet-flower flower-b">🌼</div>
-          <div class="bouquet-flower flower-c">🌻</div>
-          <div class="bouquet-flower flower-d">🌼</div>
-          <div class="bouquet-flower flower-e">🌻</div>
-          <div class="bouquet-flower flower-f">🌻</div>
-          <div class="bouquet-stems"></div>
-          <div class="bouquet-paper"></div>
-          <div class="bouquet-ribbon">🎀</div>
+          <span class="flower sunflower left-sunflower">🌻</span>
+          <span class="flower daisy left-daisy">🌼</span>
+          <span class="flower sunflower center-sunflower">🌻</span>
+          <span class="flower daisy right-daisy">🌼</span>
+          <span class="flower sunflower right-sunflower">🌻</span>
+          <div class="paper-wrap"><span class="ribbon ribbon-left"></span><span class="ribbon ribbon-right"></span></div>
         </div>
       </div>
     </section>
-
     <p class="footer-note">Con cariño, para hacerte sonreír 🌞</p>
   </main>
-
-  <script src="script.js?v=6"></script>
+  <script src="script.js?v=12"></script>
 </body>
 </html>
