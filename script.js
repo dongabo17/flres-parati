@@ -1,15 +1,20 @@
 const button = document.querySelector('#surpriseButton');
-const secretMessage = document.querySelector('#secretMessage');
+const surprise = document.querySelector('#surprise');
 const petalsContainer = document.querySelector('.petals');
 
 button.addEventListener('click', () => {
-  const isVisible = secretMessage.classList.toggle('show');
+  const isVisible = surprise.classList.toggle('show');
+  surprise.setAttribute('aria-hidden', String(!isVisible));
+  button.setAttribute('aria-expanded', String(isVisible));
   button.querySelector('span:first-child').textContent = isVisible
-    ? '¡Un abrazo virtual!'
+    ? 'Ocultar sorpresa'
     : 'Presiona para una sorpresa';
   button.querySelector('.button-icon').textContent = isVisible ? '💛' : '✨';
 
-  if (isVisible) createPetals(16);
+  if (isVisible) {
+    createPetals(20);
+    setTimeout(() => surprise.scrollIntoView({ behavior: 'smooth', block: 'center' }), 120);
+  }
 });
 
 function createPetal() {
@@ -25,9 +30,7 @@ function createPetal() {
 }
 
 function createPetals(amount) {
-  for (let i = 0; i < amount; i += 1) {
-    setTimeout(createPetal, i * 90);
-  }
+  for (let i = 0; i < amount; i += 1) setTimeout(createPetal, i * 90);
 }
 
 setInterval(createPetal, 1800);
